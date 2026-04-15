@@ -281,12 +281,12 @@ SHOW_WIN:
     ACALL RS_PRINT      ; Print Win Message
     ACALL UPDATE_SCORES ; Refresh the scoreboard!
     ACALL LONG_DELAY
-    ACALL LONG_DELAY    ; Let them gloat
+    ACALL LONG_DELAY    ; 
     LJMP ROUND_RESET
 
 ; SYSTEM: ROUND RESET ENGINE
 ROUND_RESET:
-    MOV SP, #07H        ;flash everything 
+    MOV SP, #07H        ;flash everything
     MOV R0, #30H
     MOV R1, #09H
 CLR_RAM:
@@ -354,7 +354,7 @@ UPDATE_SCORES:
     MOV A, #83H         ; LCD Address for P1 Score
     ACALL LCD_CMD
     MOV A, 43H          
-    ADD A, #'0'         ; Convert raw number to ASCII!
+    ADD A, #'0'         ; Convert raw number to ASCII
     ACALL LCD_DATA
 
     MOV A, #93H         ; LCD Address for P2 Score
@@ -368,7 +368,7 @@ DRAW_BASE_UI:
     MOV A, #80H
     ACALL LCD_CMD
     
-    ; <--- SURGICAL INJECTION: Conditional Row 1 Rendering --->
+    ;  Conditional Row 1 Rendering 
     JB P3.7, UI_PVP_R1
     MOV DPTR, #STR_R1_AI
     SJMP UI_PRINT_R1
