@@ -14,6 +14,6 @@ A standalone Tic-Tac-Toe arcade console engineered entirely in 8051 Assembly. Th
 ## Requirements
 - **Proteus Design Suite 8.13** (Required to run the `.pdsprj` hardware simulation without compatibility errors).
 - Standard 8051 Assembler like MIDE-51 (Only required if recompiling the `.asm` source code).
-- 
+  
 ## License
 [ License: This project is entirely open-source. You are free to use, modify, and distribute this codebase without restriction. ]
